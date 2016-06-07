@@ -46,7 +46,6 @@
     "test:firefox": "npm run test -- --browsers Firefox",
     "test:safari": "npm run test -- --browsers Safari",
     "test:ie": "npm run test -- --browsers IE",
-    "coveralls": "cat ./coverage/lcov/lcov.info | coveralls"
     "create": "node ./internals/scripts/create.js",
     "update": "node ./internals/scripts/update.js"
   },
@@ -245,7 +244,6 @@
     "chai": "3.5.0",
     "chai-enzyme": "0.5.1",
     "cheerio": "0.22.0",
-    "coveralls": "2.11.12",
     "css-loader": "0.25.0",
     "enzyme": "2.4.1",
     "eslint": "3.5.0",
