@@ -47,6 +47,8 @@
     "test:safari": "npm run test -- --browsers Safari",
     "test:ie": "npm run test -- --browsers IE",
     "coveralls": "cat ./coverage/lcov/lcov.info | coveralls"
+    "create": "node ./internals/scripts/create.js",
+    "update": "node ./internals/scripts/update.js"
   },
   "lint-staged": {
     "*.js": "lint:eslint",
