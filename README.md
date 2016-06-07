@@ -1,3 +1,31 @@
+## Why this fork?
+
+The aim of this project is to be the starter boilerplate for every Soundsgood's frontend project. This project will be adapted to fit our specifics needs, so we forked the original boilerplate to update it with the last improvements from the original and also keeping our modifications.
+
+### Start a new project
+
+To create a new project from this boilerplate:
+
+```
+npm run create ../<FOLDER_NAME>
+```
+
+Then go to the freshly created folder:
+
+```
+cd ../<FOLDER_NAME>
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+That's it, you can now start building an application and realize Soundsgood's users' dreams.
+
+---
+
 <img src="https://raw.githubusercontent.com/mxstbr/react-boilerplate-brand/master/assets/banner-metal.jpg" alt="react boilerplate banner" align="center" />
 
 <br />
