@@ -24,6 +24,27 @@ npm install
 
 That's it, you can now start building an application and realize Soundsgood's users' dreams.
 
+### Update a project with last boilerplate improvements
+
+Firstly, pull last improvements from the original repository into `master` branch:
+
+```
+git pull upstream master
+```
+
+_Note: `upstream` is a git remote which target [original repository](https://github.com/mxstbr/react-boilerplate)_
+
+Then rebase `master` branch onto `base`:
+```
+git checkout base && git rebase master
+```
+
+If any, fix conflicts, cleanup everything you don't want and then update existing project:
+
+```
+npm run update ../<PROJECT_NAME>
+```
+
 ---
 
 <img src="https://raw.githubusercontent.com/mxstbr/react-boilerplate-brand/master/assets/banner-metal.jpg" alt="react boilerplate banner" align="center" />
