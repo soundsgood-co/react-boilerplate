@@ -2,21 +2,29 @@
 
 The aim of this project is to be the starter boilerplate for every Soundsgood's frontend project. This project will be adapted to fit our specifics needs, so we forked the original boilerplate to update it with the last improvements from the original and also keeping our modifications.
 
-### Start a new project
+### Create a new project
 
-To create a new project from this boilerplate:
+_Before all, if it's not already done, install dependencies with `npm install`._
+
+Go to the `base` branch (corresponds to the Soundsgood adapted version of the boilerplate):
 
 ```
-npm run create ../<FOLDER_NAME>
+git checkout base
+```
+
+Create a new project from this boilerplate:
+
+```
+npm run create ../<PROJECT_NAME>
 ```
 
 Then go to the freshly created folder:
 
 ```
-cd ../<FOLDER_NAME>
+cd ../<PROJECT_NAME>
 ```
 
-Install dependencies:
+Install dependencies for the new project:
 
 ```
 npm install
