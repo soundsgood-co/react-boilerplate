@@ -2,8 +2,8 @@
   "name": "APP_NAME",
   "version": "0.0.0",
   "description": "APP_DESCRIPTION",
-  "engines" : {
-    "npm" : ">=3"
+  "engines": {
+    "npm": ">=3"
   },
   "author": "Soundsgood",
   "scripts": {
