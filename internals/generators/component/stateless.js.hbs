@@ -5,15 +5,16 @@
 */
 
 import React from 'react';
-
 {{#if wantCSS}}
+import CSSModules from 'react-css-modules';
+
 import styles from './styles.css';
 {{/if}}
 
 function {{ properCase name }}() {
   return (
     {{#if wantCSS}}
-    <div className={{curly true}}styles.{{ camelCase name }}{{curly}}>
+    <div styleName="{{ camelCase name }}">
     {{else}}
     <div>
     {{/if}}
@@ -21,4 +22,8 @@ function {{ properCase name }}() {
   );
 }
 
+{{#if wantCSS}}
+export default CSSModules({{ properCase name }}, styles);
+{{else}}
 export default {{ properCase name }};
+{{/if}}

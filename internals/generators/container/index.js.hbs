@@ -13,6 +13,8 @@ import Helmet from 'react-helmet';
 import select{{properCase name}} from './selectors';
 {{/if}}
 {{#if wantCSS}}
+import CSSModules from 'react-css-modules';
+
 import styles from './styles.css';
 {{/if}}
 
@@ -20,7 +22,7 @@ export class {{ properCase name }} extends React.Component { // eslint-disable-l
   render() {
     return (
       {{#if wantCSS}}
-      <div className={{curly true}}styles.{{ camelCase name }}{{curly}}>
+      <div styleName="{{ camelCase name }}">
       {{else}}
       <div>
       {{/if}}
@@ -49,7 +51,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 {{#if wantActionsAndReducer}}
-export default connect(mapStateToProps, mapDispatchToProps)({{ properCase name }});
+export default connect(mapStateToProps, mapDispatchToProps)({{#if wantCSS}}CSSModules({{ properCase name }}, styles){{else}}{{ properCase name }}{{/if}});
 {{else}}
-export default connect(mapDispatchToProps)({{ properCase name }});
+export default connect(mapDispatchToProps)({{#if wantCSS}}CSSModules({{ properCase name }}, styles){{else}}{{ properCase name }}{{/if}});
 {{/if}}

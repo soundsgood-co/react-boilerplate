@@ -5,8 +5,9 @@
 */
 
 import React from 'react';
-
 {{#if wantCSS}}
+import CSSModules from 'react-css-modules';
+
 import styles from './styles.css';
 {{/if}}
 
@@ -14,7 +15,7 @@ class {{ properCase name }} extends React.Component { // eslint-disable-line rea
   render() {
     return (
       {{#if wantCSS}}
-      <div className={{curly true}}styles.{{ camelCase name }}{{curly}}>
+      <div styleName="{{ camelCase name }}">
       {{else}}
       <div>
       {{/if}}
@@ -23,4 +24,8 @@ class {{ properCase name }} extends React.Component { // eslint-disable-line rea
   }
 }
 
+{{#if wantCSS}}
+export default CSSModules({{ properCase name }}, styles);
+{{else}}
 export default {{ properCase name }};
+{{/if}}
