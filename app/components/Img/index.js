@@ -6,6 +6,7 @@
  */
 
 import React, { PropTypes } from 'react';
+import CSSModules from 'react-css-modules';
 
 function Img(props) {
   return (
@@ -20,4 +21,4 @@ Img.propTypes = {
   className: PropTypes.string,
 };
 
-export default Img;
+export default CSSModules(Img); // eslint-disable-line new-cap

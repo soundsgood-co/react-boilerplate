@@ -1,11 +1,12 @@
 import React from 'react';
+import CSSModules from 'react-css-modules';
 
 import A from 'components/A';
 import styles from './styles.css';
 
 function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer styleName="footer">
       <section>
         <p>This project is licensed under the MIT license.</p>
       </section>
@@ -16,4 +17,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default CSSModules(Footer, styles); // eslint-disable-line new-cap

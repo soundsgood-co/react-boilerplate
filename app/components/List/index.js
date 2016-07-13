@@ -1,4 +1,5 @@
 import React from 'react';
+import CSSModules from 'react-css-modules';
 
 import styles from './styles.css';
 
@@ -17,8 +18,8 @@ function List(props) {
   }
 
   return (
-    <div className={styles.listWrapper}>
-      <ul className={styles.list}>
+    <div styleName="listWrapper">
+      <ul styleName="list">
         {content}
       </ul>
     </div>
@@ -30,4 +31,4 @@ List.propTypes = {
   items: React.PropTypes.array,
 };
 
-export default List;
+export default CSSModules(List, styles); // eslint-disable-line new-cap

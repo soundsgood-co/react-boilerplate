@@ -8,6 +8,7 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
+import CSSModules from 'react-css-modules';
 
 // Import the CSS reset, which HtmlWebpackPlugin transfers to the build folder
 import 'sanitize.css/sanitize.css';
@@ -21,7 +22,7 @@ import styles from './styles.css';
 
 function App(props) {
   return (
-    <div className={styles.wrapper}>
+    <div styleName="wrapper">
       <Helmet
         titleTemplate="%s - React.js Boilerplate"
         defaultTitle="React.js Boilerplate"
@@ -29,8 +30,8 @@ function App(props) {
           { name: 'description', content: 'A React.js Boilerplate application' },
         ]}
       />
-      <A className={styles.logoWrapper} href="https://twitter.com/mxstbr">
-        <Img className={styles.logo} src={Banner} alt="react-boilerplate - Logo" />
+      <A styleName="logoWrapper" href="https://twitter.com/mxstbr">
+        <Img styleName="logo" src={Banner} alt="react-boilerplate - Logo" />
       </A>
       {props.children}
       <Footer />
@@ -42,4 +43,4 @@ App.propTypes = {
   children: React.PropTypes.node,
 };
 
-export default App;
+export default CSSModules(App, styles); // eslint-disable-line new-cap

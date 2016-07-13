@@ -3,15 +3,15 @@
  */
 
 import React, { PropTypes } from 'react';
+import CSSModules from 'react-css-modules';
 
 import styles from './styles.css';
 
 function A(props) {
   return (
     <a
-      className={
-        props.className || styles.link
-      }
+      className={props.className}
+      styleName="link"
       {...props}
     />
   );
@@ -24,4 +24,4 @@ A.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default A;
+export default CSSModules(A, styles); // eslint-disable-line new-cap

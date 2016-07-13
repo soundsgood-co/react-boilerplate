@@ -1,11 +1,12 @@
 import React from 'react';
+import CSSModules from 'react-css-modules';
 
 import styles from './styles.css';
 
 function H2(props) {
   return (
-    <h2 className={styles.heading2} {...props} />
+    <h2 styleName="heading2" {...props} />
   );
 }
 
-export default H2;
+export default CSSModules(H2, styles); // eslint-disable-line new-cap

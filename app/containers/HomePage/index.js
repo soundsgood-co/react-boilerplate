@@ -7,6 +7,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
+import CSSModules from 'react-css-modules';
 import Helmet from 'react-helmet';
 
 import { createStructuredSelector } from 'reselect';
@@ -86,18 +87,18 @@ export class HomePage extends React.Component {
           ]}
         />
         <div>
-          <section className={`${styles.textSection} ${styles.centered}`}>
+          <section styleName="textSection centered">
             <H2>Start your next react project in seconds</H2>
             <p>A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices</p>
           </section>
-          <section className={styles.textSection}>
+          <section styleName="textSection">
             <H2>Try me!</H2>
-            <form className={styles.usernameForm} onSubmit={this.props.onSubmitForm}>
+            <form styleName="usernameForm" onSubmit={this.props.onSubmitForm}>
               <label htmlFor="username">Show Github repositories by
-                <span className={styles.atPrefix}>@</span>
+                <span styleName="atPrefix">@</span>
                 <input
                   id="username"
-                  className={styles.input}
+                  styleName="input"
                   type="text"
                   placeholder="mxstbr"
                   value={this.props.username}
@@ -151,4 +152,4 @@ const mapStateToProps = createStructuredSelector({
 });
 
 // Wrap the component to inject dispatch and state into it
-export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
+export default connect(mapStateToProps, mapDispatchToProps)(CSSModules(HomePage, styles, { allowMultiple: true })); // eslint-disable-line new-cap

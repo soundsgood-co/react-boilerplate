@@ -7,6 +7,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
+import CSSModules from 'react-css-modules';
 
 import { selectCurrentUser } from 'containers/App/selectors';
 
@@ -29,20 +30,20 @@ export class RepoListItem extends React.Component { // eslint-disable-line react
 
     // Put together the content of the repository
     const content = (
-      <div className={styles.linkWrapper}>
+      <div styleName="linkWrapper">
         <A
-          className={styles.linkRepo}
+          styleName="linkRepo"
           href={item.html_url}
           target="_blank"
         >
           {nameprefix + item.name}
         </A>
         <A
-          className={styles.linkIssues}
+          styleName="linkIssues"
           href={`${item.html_url}/issues`}
           target="_blank"
         >
-          <IssueIcon className={styles.issueIcon} />
+          <IssueIcon styleName="issueIcon" />
           {item.open_issues_count}
         </A>
       </div>
@@ -63,4 +64,4 @@ RepoListItem.propTypes = {
 export default connect(createSelector(
   selectCurrentUser(),
   (currentUser) => ({ currentUser })
-))(RepoListItem);
+))(CSSModules(RepoListItem, styles)); // eslint-disable-line new-cap

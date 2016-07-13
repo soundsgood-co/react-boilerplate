@@ -7,26 +7,26 @@
  */
 
 import React, { PropTypes } from 'react';
+import CSSModules from 'react-css-modules';
 
 import styles from './styles.css';
 
 function Button(props) {
-  const className = props.className ? props.className : styles.button;
-
+  const className = props.className;
   // Render an anchor tag
   let button = (
-    <a className={className} href={props.href} onClick={props.onClick}>{props.children}</a>
+    <a className={className} styleName="button" href={props.href} onClick={props.onClick}>{props.children}</a>
   );
 
   // If the Button has a handleRoute prop, we want to render a button
   if (props.handleRoute) {
     button = (
-      <button className={className} onClick={props.handleRoute} >{props.children}</button>
+      <button className={className} styleName="button" onClick={props.handleRoute} >{props.children}</button>
     );
   }
 
   return (
-    <div className={styles.buttonWrapper}>
+    <div styleName="buttonWrapper">
       {button}
     </div>
   );
@@ -40,4 +40,4 @@ Button.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Button;
+export default CSSModules(Button, styles); // eslint-disable-line new-cap

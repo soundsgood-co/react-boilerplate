@@ -1,4 +1,5 @@
 import React from 'react';
+import CSSModules from 'react-css-modules';
 
 function IssueIcon(props) {
   return (
@@ -16,4 +17,4 @@ IssueIcon.propTypes = {
   className: React.PropTypes.string,
 };
 
-export default IssueIcon;
+export default CSSModules(IssueIcon); // eslint-disable-line new-cap
