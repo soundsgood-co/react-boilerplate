@@ -104,4 +104,5 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(null, mapDispatchToProps)(CSSModules(FeaturePage, styles)); // eslint-disable-line new-cap
+export const FeaturePageWithStyles = CSSModules(FeaturePage, styles); // eslint-disable-line new-cap
+export default connect(null, mapDispatchToProps)(FeaturePageWithStyles);

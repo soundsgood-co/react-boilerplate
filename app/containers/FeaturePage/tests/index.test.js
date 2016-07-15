@@ -2,10 +2,10 @@ import expect from 'expect';
 import { shallow, mount } from 'enzyme';
 import React from 'react';
 
-import { FeaturePage } from '../index';
+import { FeaturePage, FeaturePageWithStyles } from '../index';
 import H1 from 'components/H1';
 
-describe('<FeaturePage />', () => {
+describe.only('<FeaturePage />', () => {
   it('should render its heading', () => {
     const renderedComponent = shallow(
       <FeaturePage />
@@ -24,7 +24,7 @@ describe('<FeaturePage />', () => {
     };
 
     const renderedComponent = mount(
-      <FeaturePage changeRoute={openRoute} />
+      <FeaturePageWithStyles changeRoute={openRoute} />
     );
     const button = renderedComponent.find('button');
     button.simulate('click');
