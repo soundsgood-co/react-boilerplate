@@ -11,7 +11,7 @@ import CSSModules from 'react-css-modules';
 import styles from './styles.css';
 {{/if}}
 
-function {{ properCase name }}() {
+export function {{ properCase name }}() {
   return (
     {{#if wantCSS}}
     <div styleName="{{ camelCase name }}">
