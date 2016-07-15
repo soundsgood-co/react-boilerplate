@@ -3,7 +3,7 @@ import CSSModules from 'react-css-modules';
 
 import styles from './styles.css';
 
-function ListItem(props) {
+export function ListItem(props) {
   return (
     <li className={props.className} styleName="item">
       <div styleName="itemContent">

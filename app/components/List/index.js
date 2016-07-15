@@ -3,7 +3,7 @@ import CSSModules from 'react-css-modules';
 
 import styles from './styles.css';
 
-function List(props) {
+export function List(props) {
   const ComponentToRender = props.component;
   let content = (<div></div>);
 

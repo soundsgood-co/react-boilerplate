@@ -11,7 +11,7 @@ import CSSModules from 'react-css-modules';
 
 import styles from './styles.css';
 
-function Button(props) {
+export function Button(props) {
   const className = props.className;
   // Render an anchor tag
   let button = (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function H3(props) {
+export function H3(props) {
   return (
     <h3 {...props} />
   );

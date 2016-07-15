@@ -7,7 +7,7 @@ import CSSModules from 'react-css-modules';
 
 import styles from './styles.css';
 
-function A(props) {
+export function A(props) {
   return (
     <a
       className={props.className}

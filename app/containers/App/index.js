@@ -20,7 +20,7 @@ import A from 'components/A';
 
 import styles from './styles.css';
 
-function App(props) {
+export function App(props) {
   return (
     <div styleName="wrapper">
       <Helmet

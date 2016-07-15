@@ -1,7 +1,7 @@
 import React from 'react';
 import CSSModules from 'react-css-modules';
 
-function IssueIcon(props) {
+export function IssueIcon(props) {
   return (
     <svg
       height="1em"

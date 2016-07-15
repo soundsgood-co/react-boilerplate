@@ -3,7 +3,7 @@ import CSSModules from 'react-css-modules';
 
 import styles from './styles.css';
 
-function LoadingIndicator() {
+export function LoadingIndicator() {
   return (
     <div>
       <div styleName="sk-fading-circle">

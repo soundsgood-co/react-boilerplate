@@ -4,7 +4,7 @@ import CSSModules from 'react-css-modules';
 import A from 'components/A';
 import styles from './styles.css';
 
-function Footer() {
+export function Footer() {
   return (
     <footer styleName="footer">
       <section>

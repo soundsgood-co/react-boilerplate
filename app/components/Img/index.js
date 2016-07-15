@@ -8,7 +8,7 @@
 import React, { PropTypes } from 'react';
 import CSSModules from 'react-css-modules';
 
-function Img(props) {
+export function Img(props) {
   return (
     <img className={props.className} src={props.src} alt={props.alt} />
   );

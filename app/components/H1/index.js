@@ -3,7 +3,7 @@ import CSSModules from 'react-css-modules';
 
 import styles from './styles.css';
 
-function H1(props) {
+export function H1(props) {
   return (
     <h1 styleName="heading1" {...props} />
   );

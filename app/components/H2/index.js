@@ -3,7 +3,7 @@ import CSSModules from 'react-css-modules';
 
 import styles from './styles.css';
 
-function H2(props) {
+export function H2(props) {
   return (
     <h2 styleName="heading2" {...props} />
   );
