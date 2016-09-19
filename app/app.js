@@ -52,7 +52,7 @@ const rootRoute = {
 };
 
 
-const render = (translatedMessages) => {
+const render = (messages) => {
   ReactDOM.render(
     <Provider store={store}>
       <LanguageProvider messages={messages}>
